@@ -57,7 +57,16 @@ namespace ConsoleCalculator.Tests
 
             Assert.Equal(expectedResult, actualResult);
         }
+        [Fact]
+        public void DoOperationDivideTest_WhenAddedWrongCommand()
+        {
+            double a = 100;
+            double b = 223;
+            var expectedResult = double.NaN;
 
-       
+            double actualResult = Calculator.DoOperation(a, b, null);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
